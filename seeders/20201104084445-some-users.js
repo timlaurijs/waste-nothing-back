@@ -10,7 +10,7 @@ module.exports = {
         {
           firstName: "John",
           lastName: "Doe",
-          phoneNumber: 06123456,
+          phoneNumber: "06123456",
           city: "Amsterdam",
           country: "Netherlands",
           email: "a@a.a",
@@ -21,7 +21,7 @@ module.exports = {
         {
           firstName: "Jane",
           lastName: "Doe",
-          phoneNumber: 06234567,
+          phoneNumber: "06234567",
           city: "Wuhan",
           country: "China",
           email: "b@b.b",
