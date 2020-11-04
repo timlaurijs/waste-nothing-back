@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/timlaurijs/waste-nothing-back#readme",
   "dependencies": {
+    "all-the-cities": "^3.1.0",
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
