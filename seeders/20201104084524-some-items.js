@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -10,8 +10,8 @@ module.exports = {
           description: "Sits very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/1/15/Library_Chair_dakota_jackson.jpg",
-          city: "Amsterdam",
-          country: "Netherlands",
+          city: "amsterdam",
+          country: "netherlands",
           createdAt: new Date(),
           updatedAt: new Date(),
           userId: 1,
@@ -22,8 +22,8 @@ module.exports = {
           description: "Plays very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/6/66/Red_car_toy.jpg",
-          city: "Amsterdam",
-          country: "Netherlands",
+          city: "amsterdam",
+          country: "netherlands",
           createdAt: new Date(),
           updatedAt: new Date(),
           userId: 1,
@@ -34,8 +34,8 @@ module.exports = {
           description: "Cooks very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/1/11/Frying_pan.JPG",
-          city: "Wuhan",
-          country: "China",
+          city: "wuhan",
+          country: "china",
           createdAt: new Date(),
           updatedAt: new Date(),
           userId: 2,
@@ -43,10 +43,10 @@ module.exports = {
         },
       ],
       {}
-    )
+    );
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete("categories", null, {})
+    return queryInterface.bulkDelete("categories", null, {});
   },
-}
+};
