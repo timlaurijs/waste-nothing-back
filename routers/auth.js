@@ -5,6 +5,7 @@ const authMiddleware = require("../auth/middleware");
 const { SALT_ROUNDS } = require("../config/constants");
 
 const User = require("../models/").user;
+const Items = require("../models/").item;
 
 const router = new Router();
 
@@ -92,9 +93,13 @@ router.post("/signup", async (req, res) => {
 // - get the users email & name using only their token
 // - checking if a token is (still) valid
 router.get("/me", authMiddleware, async (req, res) => {
+  const items = await Items.findAll({
+    where: { userId: req.user.id },
+    order: [["createdAt", "DESC"]],
+  });
   // don't send back the password hash
   delete req.user.dataValues["password"];
-  res.status(200).send({ ...req.user.dataValues });
+  res.status(200).send({ ...req.user.dataValues, items });
 });
 
 module.exports = router;

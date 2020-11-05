@@ -3,6 +3,7 @@ const Items = require("../models/").item;
 
 const router = new Router();
 
+//get items by city
 router.get("/items/:city", async (req, res) => {
   const city = req.params.city;
   console.log(city);
