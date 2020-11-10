@@ -3,6 +3,11 @@ const Items = require("../models/").item;
 
 const router = new Router();
 
+//test endpoint
+router.get("/ppp", async (req, res) => {
+  res.send("you want ppp, you get ppp");
+});
+
 //get items by city
 router.get("/items/:city", async (req, res) => {
   const city = req.params.city;
