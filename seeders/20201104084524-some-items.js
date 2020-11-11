@@ -6,7 +6,7 @@ module.exports = {
       "items",
       [
         {
-          title: "Chair",
+          title: "chair",
           description: "Sits very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/1/15/Library_Chair_dakota_jackson.jpg",
@@ -18,7 +18,7 @@ module.exports = {
           categoryId: 1,
         },
         {
-          title: "Toy car",
+          title: "toy car",
           description: "Plays very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/6/66/Red_car_toy.jpg",
@@ -30,7 +30,7 @@ module.exports = {
           categoryId: 4,
         },
         {
-          title: "Pan",
+          title: "pan",
           description: "Cooks very well",
           imageSource:
             "https://upload.wikimedia.org/wikipedia/commons/1/11/Frying_pan.JPG",

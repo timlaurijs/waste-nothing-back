@@ -9,15 +9,30 @@ router.get("/ppp", (req, res) => {
 });
 
 //get items by city
-router.get("/items/:city", async (req, res) => {
-  const city = req.params.city;
-  console.log(city);
+router.get("/items/:queryType/:query", async (req, res) => {
+  const queryType = req.params.queryType;
+  const query = req.params.query;
+  let data;
   try {
-    const data = await Items.findAll({
-      where: {
-        city,
-      },
-    });
+    if (queryType === "city") {
+      data = await Items.findAll({
+        where: {
+          city: query,
+        },
+      });
+    } else if (queryType === "country") {
+      data = await Items.findAll({
+        where: {
+          country: query,
+        },
+      });
+    } else if (queryType === "title") {
+      data = await Items.findAll({
+        where: {
+          title: query,
+        },
+      });
+    }
     if (!data.length) {
       res.status(404).send({ message: "No results based on the city name" });
       return;
